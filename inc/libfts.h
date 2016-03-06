@@ -11,7 +11,7 @@ int			ft_toupper(int c);
 int			ft_tolower(int c);
 // int			ft_puts(const char *str);
 size_t		ft_strlen(char *str);
-// char		*ft_strcat(char *s1, char const *s2);
+char		*ft_strcat(char *s1, char const *s2);
 void		*ft_memset(void *b, int c, size_t n);
 void		*ft_memcpy(void *dst, const void *src, size_t n);
 // char		*ft_strdup(char const *str);

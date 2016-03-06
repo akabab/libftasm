@@ -10,21 +10,6 @@ void logit (char * str)
 	printf("\n\033[33m > %s\033[0m\n\n", str);
 }
 
-// void	ft_bzero(char *s, size_t n);
-// int		ft_isalpha(int c);
-// int		ft_isdigit(int c);
-// int		ft_isalnum(int c);
-// int		ft_isascii(int c);
-// int		ft_isprint(int c);
-// int		ft_toupper(int c);
-// int		ft_tolower(int c);
-// // int		ft_puts(const char *str);
-// size_t	ft_strlen(char *str);
-// // char	*ft_strcat(char *s1, char const *s2);
-// void	*ft_memset(void *b, int c, size_t len);
-// void	*ft_memcpy(void *dst, void *src, size_t len);
-// // char	*ft_strdup(char const *str);
-// // void	ft_cat(int fd);
 
 static void		test_ft_strlen_sub(char *str)
 {
@@ -135,6 +120,8 @@ int			main(void)
 	// test_ft_memset();
 	// test_ft_memcpy();
 	// test_ft_strlen();
-	test_ft_isalpha();
+	// test_ft_isalpha();
+	ft_puts(NULL);
+	ft_puts("foo bar baz");
 	return (0);
 }

@@ -150,8 +150,8 @@ int					main(void)
 //	D_ADD_HCTEST(strcpy);
 //#define	D_STRNCPY
 //	D_ADD_HCTEST(strncpy);
-// #define	D_STRCAT
-// 	D_ADD_TEST(strcat);
+#define	D_STRCAT
+	D_ADD_TEST(strcat);
 //#define	D_STRNCAT
 //	D_ADD_TEST(strncat);
 //#define	D_STRLCAT
@@ -1439,10 +1439,12 @@ int				uf_test_strcat(void)
 	memset(dest, 0, sizeof(dest));
 	strcat(dest, "Hello ");
 	ft_strcat(dest2, "Hello ");
+	// printf("strcat: [%s] vs ft_strcat: [%s]\n", dest, dest2);
 	if (strcmp(dest, dest2) != 0)
 		D_ERROR
-	strcat(dest, "Hello ");
-	ft_strcat(dest2, "Hello ");
+	strcat(dest, "World");
+	ft_strcat(dest2, "World");
+	// printf("strcat: [%s] vs ft_strcat: [%s]\n", dest, dest2);
 	if (strcmp(dest, dest2) != 0)
 		D_ERROR
 	return (1);
