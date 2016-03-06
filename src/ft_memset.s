@@ -2,14 +2,11 @@ segment .text
 	global		_ft_memset
 
 _ft_memset:
-
-loop:
-	cmp			rdx, 0
-	je			done
-	mov byte	[rdi], sil
-	inc			rdi
-	dec			rdx
-	jmp			loop
+	push		rdi
+	mov			rcx, rdx
+	mov			al, sil 
+	rep			stosb
 
 done:
+	pop			rax
 	ret
