@@ -144,8 +144,8 @@ int					main(void)
 //	D_ADD_HCTEST(memcmp);
 #define	D_STRLEN
 	D_ADD_TEST(strlen);
-// #define	D_STRDUP
-// 	D_ADD_TEST(strdup);
+#define	D_STRDUP
+	D_ADD_TEST(strdup);
 //#define	D_STRCPY
 //	D_ADD_HCTEST(strcpy);
 //#define	D_STRNCPY

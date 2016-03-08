@@ -2,6 +2,7 @@
 %define STDOUT				1
 %define WRITE				4
 
+
 section .data
 	newline	db		10
 	null    db      "(null)", 10
@@ -9,6 +10,8 @@ section .data
 segment .text
 	global		_ft_puts
 	extern		_ft_strlen
+
+; int			ft_puts(const char *str);
 
 _ft_puts:
 	mov			r10, rdi

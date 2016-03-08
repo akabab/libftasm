@@ -1,6 +1,8 @@
 segment .text
 	global		_ft_isprint
 
+; int			ft_isprint(int c);
+
 _ft_isprint:
 	cmp			rdi, 32
 	jl			false

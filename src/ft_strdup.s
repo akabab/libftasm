@@ -1,58 +1,36 @@
 segment .text
-	global		_ft_strequ
+	global		_ft_strdup
 	extern		_ft_strlen
+	extern		_malloc
 
-; int   ft_strequ(char const *s1, char const *s2);
+; char		*ft_strdup(char const *str);
 
-_ft_strequ:
-
+_ft_strdup:
+	; prologue
 	push rbp
 	mov rbp, rsp
-	;
-	push rcx
 
-	push		rdi
-	push		rsi
+	push		rdi ; save rdi -> #1
 
-@if_null:
-	cmp			rdi, 0
-	je			@done
-	cmp			rsi, 0
-	je			@done
-
-@lenght_check:
 	call		_ft_strlen
-	mov			r10, rax
+	inc			rax ; add 1 for '\0'
+	mov			rdi, rax ; set rdi with len for malloc
+	push		rax ; push len for copy -> #2
+	call		_malloc
+	test		rax, rax ; test if malloc failed
+	jz			@done ; return if failed
+	mov			r12, rax ; save returned pointer -> r12
 
-	mov			rdi, rsi
-	call		_ft_strlen
-	mov			r11, rax
-
-	cmp			r10, r11
-	jne			@false
-
-@byte_check:
-	mov			rcx, r10
-
-	pop			rdi
-	pop			rsi
-
+	mov			rdi, rax ; set rdi with return pointer
+	pop			rcx ; set rcx with len <- #2
+	pop			rsi ; recover source <- #1
 	cld
-	rep			cmpsb
-	jne			@false
-
-@true:
-	mov			rax, 1
-	jmp			@done
-
-@false:
-	mov			rax, 0
-	jmp			@done
+	repe		movsb ; copy
+	mov			rdi, 0 ; add '\0'
+	mov			rax, r12 ; recover <- r12
 
 @done:
-	pop rcx
-	;
+	; epilogue
 	mov rsp, rbp
 	pop rbp
-
 	ret

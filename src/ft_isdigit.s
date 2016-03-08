@@ -1,6 +1,8 @@
 segment .text
 	global		_ft_isdigit
 
+; int			ft_isdigit(int c);
+
 _ft_isdigit:
 	cmp			rdi, '0'
 	jl			false
