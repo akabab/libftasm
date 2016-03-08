@@ -10,7 +10,9 @@ SRCS = \
 		ft_memset.s			\
 		ft_memcpy.s			\
 		ft_strcat.s			\
+		ft_strncmp.s		\
 		ft_strcmp.s			\
+		ft_strnequ.s		\
 		ft_strequ.s			\
 		ft_strlen.s			\
 		ft_puts.s			\

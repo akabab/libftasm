@@ -166,8 +166,8 @@ int					main(void)
 //	D_ADD_TEST(strnstr);
 #define	D_STRCMP
 	D_ADD_TEST(strcmp);
-//#define	D_STRNCMP
-//	D_ADD_TEST(strncmp);
+#define	D_STRNCMP
+	D_ADD_TEST(strncmp);
 //#define	D_ATOI
 //	D_ADD_HCTEST(atoi);
 #define	D_ISALPHA
@@ -202,8 +202,8 @@ int					main(void)
 //	D_ADD_TEST(strmapi);
 #define	D_STREQU
 	D_ADD_TEST(strequ);
-//#define	D_STRNEQU
-//	D_ADD_TEST(strnequ);
+#define	D_STRNEQU
+	D_ADD_TEST(strnequ);
 //#define	D_STRSUB
 //	D_ADD_TEST(strsub);
 //#define	D_STRJOIN
@@ -762,10 +762,10 @@ int				uf_test_strnequ(void)
 {
 	int			ret;
 
-	ft_strnequ(NULL, NULL, 0);
-	ft_strnequ(NULL, NULL, 1);
-	ft_strnequ(NULL, "", 1);
-	ft_strnequ("", NULL, 1);
+	// ft_strnequ(NULL, NULL, 0);
+	// ft_strnequ(NULL, NULL, 1);
+	// ft_strnequ(NULL, "", 1);
+	// ft_strnequ("", NULL, 1);
 	ret = 0;
 	if ((ret = ft_strnequ("abc", "abc", 2)) != 1)
 	{
