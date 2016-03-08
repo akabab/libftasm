@@ -45,11 +45,6 @@ _ft_strcmp:
 
 	cld
 	repe		cmpsb
-	jne			@diff
-
-@equal:
-	mov			rax, 0
-	jmp			@done
 
 @diff:
 	dec			rdi
