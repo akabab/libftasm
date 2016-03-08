@@ -10,6 +10,8 @@ SRCS = \
 		ft_memset.s			\
 		ft_memcpy.s			\
 		ft_strcat.s			\
+		ft_strcmp.s			\
+		ft_strequ.s			\
 		ft_strlen.s			\
 		ft_puts.s			\
 		ft_isalpha.s		\
@@ -20,7 +22,7 @@ SRCS = \
 		ft_isdigit.s		\
 		ft_isprint.s		\
 		ft_tolower.s		\
-		ft_toupper.s		
+		ft_toupper.s
 
 # HFILES = $(patsubst %,$(HPATH)/%, $(HEADER))
 SFILES = $(patsubst %.s, $(OPATH)/%.o, $(SRCS))
@@ -47,6 +49,10 @@ $(OPATH):
 
 # TESTS
 
-test:
-	gcc main.c $(NAME)
-	./a.out
+tests: all
+	gcc main.c $(NAME) -o tests
+	./tests
+
+qp: all
+	gcc main_qperez.c $(NAME) -I $(HPATH) -o tests_qp
+	./tests_qp

@@ -164,8 +164,8 @@ int					main(void)
 //	D_ADD_TEST(strstr);
 //#define	D_STRNSTR
 //	D_ADD_TEST(strnstr);
-// #define	D_STRCMP
-// 	D_ADD_TEST(strcmp);
+#define	D_STRCMP
+	D_ADD_TEST(strcmp);
 //#define	D_STRNCMP
 //	D_ADD_TEST(strncmp);
 //#define	D_ATOI
@@ -200,8 +200,8 @@ int					main(void)
 //	D_ADD_TEST(strmap);
 //#define	D_STRMAPI
 //	D_ADD_TEST(strmapi);
-// #define	D_STREQU
-// 	D_ADD_TEST(strequ);
+#define	D_STREQU
+	D_ADD_TEST(strequ);
 //#define	D_STRNEQU
 //	D_ADD_TEST(strnequ);
 //#define	D_STRSUB
@@ -810,6 +810,7 @@ int				uf_test_strequ(void)
 	ft_strequ(NULL, NULL);
 	ft_strequ("", NULL);
 	ft_strequ(NULL, "");
+
 	ret = 0;
 	str = strdup("abc"); /* FIX un faux OK si l'user a mis "if s1 == s2 return 1;" */
 	if ((ret = ft_strequ(str, "abc")) != 1)
@@ -838,7 +839,7 @@ int				uf_test_strequ(void)
 			   but have ret = \"%d\"\033[0m\n", __LINE__ - 2, __func__, ret);
 		return (0);
 	}
-	if ((ret = ft_strequ("abc", "abcd")) != 0)
+	if ((ret = ft_strequ("abcdefgh", "abcdefghi")) != 0)
 	{
 		printf("Error Line %d, Funct %s : \n\033[31mft_strequ(\"abc\", \"abcd\").\nExpected ret = \"0\" \
 			   but have ret = \"%d\"\033[0m\n", __LINE__ - 2, __func__, ret);
@@ -1232,27 +1233,30 @@ int				uf_test_strcmp(void)
 {
 	int			a;
 
-	a = ft_strcmp("abc", "abc");
+	a = strcmp("abc", "abc");
+	printf("abc, abc -> %d vs %d\n", strcmp("abc", "abc"), ft_strcmp("abc", "abc"));
 #ifdef  __clang__
-	if (a != strcmp("abc", "abc"))
+	if (a != ft_strcmp("abc", "abc"))
 		D_ERROR;
 #endif
 #ifndef  __clang__
 	if (a)
 		D_ERROR;
 #endif
-	a = ft_strcmp("cba", "abc");
+	a = strcmp("cba", "abc");
+	printf("cba, abc -> %d vs %d\n", strcmp("cba", "abc"), ft_strcmp("cba", "abc"));
 #ifdef  __clang__
-	if (a != strcmp("cba", "abc"))
+	if (a != ft_strcmp("cba", "abc"))
 		D_ERROR;
 #endif
 #ifndef  __clang__
 	if (!a)
 		D_ERROR;
 #endif
-	a = ft_strcmp("abc", "cba");
+	a = strcmp("abc", "cba");
+	printf("abc, cba -> %d vs %d\n", strcmp("abc", "cba"), ft_strcmp("abc", "cba"));
 #ifdef  __clang__
-	if (a != strcmp("abc", "cba"))
+	if (a != ft_strcmp("abc", "cba"))
 		D_ERROR;
 #endif
 #ifndef  __clang__
