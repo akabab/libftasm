@@ -50,10 +50,12 @@ _ft_strcmp:
 	dec			rdi
 	dec			rsi
 
-	mov			r10b, [rsi]
-	mov			r11b, [rdi]
-	sub			r10, r11
-	mov			rax, r10
+	xor			r8, r8
+	xor			r9, r9
+	mov			r8b, [rsi]
+	mov			r9b, [rdi]
+	sub			r8, r9
+	mov			rax, r8
 	jmp			@done
 
 @done:
