@@ -807,9 +807,9 @@ int				uf_test_strequ(void)
 	int			ret;
 	char		*str;
 
-	ft_strequ(NULL, NULL);
-	ft_strequ("", NULL);
-	ft_strequ(NULL, "");
+	// ft_strequ(NULL, NULL);
+	// ft_strequ("", NULL);
+	// ft_strequ(NULL, "");
 
 	ret = 0;
 	str = strdup("abc"); /* FIX un faux OK si l'user a mis "if s1 == s2 return 1;" */
@@ -1234,7 +1234,7 @@ int				uf_test_strcmp(void)
 	int			a;
 
 	a = strcmp("abc", "abc");
-	printf("abc, abc -> %d vs %d\n", strcmp("abc", "abc"), ft_strcmp("abc", "abc"));
+	// printf("abc, abc -> %d vs %d\n", strcmp("abc", "abc"), ft_strcmp("abc", "abc"));
 #ifdef  __clang__
 	if (a != ft_strcmp("abc", "abc"))
 		D_ERROR;
@@ -1244,7 +1244,7 @@ int				uf_test_strcmp(void)
 		D_ERROR;
 #endif
 	a = strcmp("cba", "abc");
-	printf("cba, abc -> %d vs %d\n", strcmp("cba", "abc"), ft_strcmp("cba", "abc"));
+	// printf("cba, abc -> %d vs %d\n", strcmp("cba", "abc"), ft_strcmp("cba", "abc"));
 #ifdef  __clang__
 	if (a != ft_strcmp("cba", "abc"))
 		D_ERROR;
@@ -1254,7 +1254,7 @@ int				uf_test_strcmp(void)
 		D_ERROR;
 #endif
 	a = strcmp("abc", "cba");
-	printf("abc, cba -> %d vs %d\n", strcmp("abc", "cba"), ft_strcmp("abc", "cba"));
+	// printf("abc, cba -> %d vs %d\n", strcmp("abc", "cba"), ft_strcmp("abc", "cba"));
 #ifdef  __clang__
 	if (a != ft_strcmp("abc", "cba"))
 		D_ERROR;

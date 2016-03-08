@@ -50,7 +50,7 @@ $(OPATH):
 # TESTS
 
 tests: all
-	gcc main.c $(NAME) -o tests
+	gcc main.c $(NAME) -I $(HPATH) -o tests
 	./tests
 
 qp: all
