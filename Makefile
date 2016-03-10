@@ -14,6 +14,7 @@ SRCS = \
 		ft_strcmp.s			\
 		ft_strnequ.s		\
 		ft_strequ.s			\
+		ft_strchr.s			\
 		ft_strlen.s			\
 		ft_strdup.s			\
 		ft_puts.s			\

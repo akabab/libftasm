@@ -156,8 +156,8 @@ int					main(void)
 //	D_ADD_TEST(strncat);
 //#define	D_STRLCAT
 //	D_ADD_TEST(strlcat);
-// #define	D_STRCHR
-// 	D_ADD_TEST(strchr);
+#define	D_STRCHR
+	D_ADD_TEST(strchr);
 //#define	D_STRRCHR
 //	D_ADD_TEST(strrchr);
 //#define	D_STRSTR
@@ -1344,13 +1344,29 @@ int				uf_test_strrchr(void)
 #ifdef	D_STRCHR
 int				uf_test_strchr(void)
 {
-	char		str[] = "Hello je tesx";
+	char		str[] = "Hello world";
+
+	// char	*str2 = malloc(5);
+	// str2[0] = 'A';
+	// str2[1] = 'B';
+	// str2[2] = 'C';
+	// str2[3] = 'D';
+	// str2[4] = '\0';
+
+	// char *p;
+	// p = ft_strchr(str2, '\0');
+	// printf("\n%p\n", str2);
+	// printf("%p\n", p);
+	// if (p)
+	// 	printf("%c\n", *p);
+	// else
+	// 	printf("not found\n");
 
 	if (strchr(str, 'H') != ft_strchr(str, 'H'))
 		D_ERROR
-	if (strchr(str, 'j') != ft_strchr(str, 'j'))
+	if (strchr(str, 'o') != ft_strchr(str, 'o'))
 		D_ERROR
-	if (strchr(str, 'x') != ft_strchr(str, 'x'))
+	if (strchr(str, 'd') != ft_strchr(str, 'd'))
 		D_ERROR
 	if (strchr(str, 'y') != ft_strchr(str, 'y'))
 		D_ERROR

@@ -17,22 +17,18 @@ void		*ft_memcpy(void *dst, const void *src, size_t n);
 
 char		*ft_strdup(char const *str);
 
-int			ft_puts(const char *str); // TESTS
+int			ft_puts(const char *str);
 void		ft_cat(int fd);
 
 // BONUS
 
 int			ft_islower(int c);
 int			ft_isupper(int c);
-// int					ft_indexof	(char c, char * str);
+
 int			ft_strncmp(char const *s1, char const *s2, size_t n);
 int			ft_strcmp(char const *s1, char const *s2);
 int			ft_strnequ(char const *s1, char const *s2, size_t n);
 int			ft_strequ(char const *s1, char const *s2);
-// char *			ft_strchr	(const char *s, int c);
-// void				ft_strclr	(char *s);
-
-// char		*ft_strcpy(char * dst, const char * src);
-// char		*ft_strncpy(char * dst, const char * src, size_t len);
+char		*ft_strchr(const char *s, int c);
 
 #endif
