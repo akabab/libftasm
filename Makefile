@@ -6,7 +6,7 @@
 #    By: ycribier <ycribier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/03/10 20:59:14 by ycribier          #+#    #+#              #
-#    Updated: 2016/03/10 20:59:36 by ycribier         ###   ########.fr        #
+#    Updated: 2016/03/10 21:03:43 by ycribier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,18 +66,14 @@ $(OPATH):
 
 # TESTS
 
-tests: all
-	gcc main.c $(NAME) -I $(HPATH) -o tests
-	./tests
-
-qp: all
+tests_qp: all
 	gcc main_qperez.c $(NAME) -I $(HPATH) -o tests_qp
 	./tests_qp
 
-puts: all
+tests_puts: all
 	gcc main_puts.c $(NAME) -I $(HPATH) -o tests_puts
 	./tests_puts
 
-cat: all
+tests_cat: all
 	gcc main_cat.c $(NAME) -I $(HPATH) -o tests_cat
 	./tests_cat
