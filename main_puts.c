@@ -18,6 +18,7 @@ int		main(int ac, char *av[])
 	}
 	else
 	{
+		ft_puts(NULL);
 		printf("usage: %s <message> ...\n", av[0]);
 	}
 	return (0);
