@@ -6,7 +6,7 @@
 #    By: ycribier <ycribier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/03/10 20:59:14 by ycribier          #+#    #+#              #
-#    Updated: 2016/03/10 21:03:43 by ycribier         ###   ########.fr        #
+#    Updated: 2016/03/10 21:52:20 by ycribier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,8 @@ SRCS = \
 		ft_strchr.s			\
 		ft_strlen.s			\
 		ft_strdup.s			\
+		ft_strcpy.s			\
+		ft_strncpy.s		\
 		ft_puts.s			\
 		ft_isalpha.s		\
 		ft_islower.s		\

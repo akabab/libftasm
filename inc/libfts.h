@@ -6,7 +6,7 @@
 /*   By: ycribier <ycribier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/10 20:36:37 by ycribier          #+#    #+#             */
-/*   Updated: 2016/03/10 20:59:45 by ycribier         ###   ########.fr       */
+/*   Updated: 2016/03/10 21:52:46 by ycribier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,7 @@ int			ft_strcmp(char const *s1, char const *s2);
 int			ft_strnequ(char const *s1, char const *s2, size_t n);
 int			ft_strequ(char const *s1, char const *s2);
 char		*ft_strchr(const char *s, int c);
+char		*ft_strcpy(char *dest, const char *src);
+char		*ft_strncpy(char *dest, const char *src, size_t n);
 
 #endif

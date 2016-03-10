@@ -146,10 +146,10 @@ int					main(void)
 	D_ADD_TEST(strlen);
 #define	D_STRDUP
 	D_ADD_TEST(strdup);
-//#define	D_STRCPY
-//	D_ADD_HCTEST(strcpy);
-//#define	D_STRNCPY
-//	D_ADD_HCTEST(strncpy);
+#define	D_STRCPY
+	D_ADD_HCTEST(strcpy);
+#define	D_STRNCPY
+	D_ADD_HCTEST(strncpy);
 #define	D_STRCAT
 	D_ADD_TEST(strcat);
 //#define	D_STRNCAT
@@ -1474,6 +1474,16 @@ int				uf_test_strcat(void)
 #ifdef	D_STRNCPY
 int				uf_test_strncpy(void)
 {
+	// char		tab1[21] = "12345678901234567890";
+	// char		tab2[21] = "12345678901234567890";
+
+	// char		*d1 = strncpy(tab1, "hello world", 4);
+	// char		*d2 = ft_strncpy(tab2, "hello world", 4);
+	// printf("\n(%p)'%s' vs (%p)'%s'\n", tab1, tab1, tab2, tab2);
+	// printf("(%p)'%s' vs (%p)'%s'\n", d1, d1, d2, d2);
+	// printf("%c\n", *(d2+1));
+
+
 	char		ctab[11], ctab2[21], ctab3[21];
 	int			i, j;
 	size_t		k;
@@ -1498,6 +1508,7 @@ int				uf_test_strncpy(void)
 			ctab3[20] = 0;
 			if (strncpy(ctab2, ctab, k) != ctab2 || ft_strncpy(ctab3, ctab, k) != ctab3)
 				D_ERROR
+			// printf("\nk=%d -'%s' vs '%s'\n", k, ctab2, ctab3);
 			if (strcmp(ctab2, ctab3))
 				D_ERROR
 			++i;
@@ -1513,7 +1524,6 @@ int				uf_test_strcpy(void)
 {
 	char		dest[50] = {0};
 	char		dest2[50] = {0};
-
 
 	char			ctab[11], ctab2[11], ctab3[11];
     int				i, j;
