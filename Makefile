@@ -41,6 +41,7 @@ $(OPATH)/%.o: $(SPATH)/%.s $(HPATH)/libfts.h
 
 clean:
 	rm -rf $(OPATH)
+	rm -f tests*
 
 fclean: clean
 	rm -f $(NAME)

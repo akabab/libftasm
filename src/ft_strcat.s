@@ -1,3 +1,15 @@
+; **************************************************************************** ;
+;                                                                              ;
+;                                                         :::      ::::::::    ;
+;    ft_strcat.s                                        :+:      :+:    :+:    ;
+;                                                     +:+ +:+         +:+      ;
+;    By: ycribier <ycribier@student.42.fr>          +#+  +:+       +#+         ;
+;                                                 +#+#+#+#+#+   +#+            ;
+;    Created: 2016/03/08 18:38:17 by ycribier          #+#    #+#              ;
+;    Updated: 2016/03/10 20:12:01 by ycribier         ###   ########.fr        ;
+;                                                                              ;
+; **************************************************************************** ;
+
 segment .text
 	global		_ft_strcat
 	extern		_ft_strlen
@@ -19,6 +31,6 @@ _ft_strcat:
 	rep			movsb
 	mov	byte	[rdi], 0
 
-done:
+@done:
 	pop			rax
 	ret

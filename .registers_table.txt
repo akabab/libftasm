@@ -1,0 +1,7 @@
+# Registers table
+
+        [   #1  |   #2  |   #3  |   #4  |   #5  |   #6  |       |  ret  ]
+ 64 bit [  rdi  |  rsi  |  rdx  |  rcx  |  r8   |  r9   |  rbx  |  rax  ]
+ 32 bit [  edi  |  esi  |  edx  |  ecx  |  r8d  |  r9d  |  ebx  |  eax  ]
+ 16 bit [   di  |   si  |   dx  |   cx  |  r8w  |  r9w  |   bx  |   ax  ]
+  8 bit [  dil  |  sil  |   dl  |   cl  |  r8b  |  r9b  |   bl  |   al  ]

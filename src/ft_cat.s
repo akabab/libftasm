@@ -1,8 +1,18 @@
+; **************************************************************************** ;
+;                                                                              ;
+;                                                         :::      ::::::::    ;
+;    ft_cat.s                                           :+:      :+:    :+:    ;
+;                                                     +:+ +:+         +:+      ;
+;    By: ycribier <ycribier@student.42.fr>          +#+  +:+       +#+         ;
+;                                                 +#+#+#+#+#+   +#+            ;
+;    Created: 2016/03/10 19:49:00 by ycribier          #+#    #+#              ;
+;    Updated: 2016/03/10 20:08:49 by ycribier         ###   ########.fr        ;
+;                                                                              ;
+; **************************************************************************** ;
+
 %define MACH_SYSCALL(nb)	0x2000000 | nb
 %define READ				3 ; user_ssize_t read(int fd, user_addr_t cbuf, user_size_t nbyte);
 %define WRITE				4 ; user_ssize_t write(int fd, user_addr_t cbuf, user_size_t nbyte);
-%define OPEN				5 ; int open(user_addr_t path, int flags, int mode);
-%define CLOSE				6 ; int close(int fd);
 
 %define STDOUT				1
 
