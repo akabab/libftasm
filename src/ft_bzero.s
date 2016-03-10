@@ -9,5 +9,5 @@ _ft_bzero:
 	mov			rsi, 0
 	call		_ft_memset
 
-done:
+@done:
 	ret

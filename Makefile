@@ -25,7 +25,8 @@ SRCS = \
 		ft_isdigit.s		\
 		ft_isprint.s		\
 		ft_tolower.s		\
-		ft_toupper.s
+		ft_toupper.s		\
+		ft_cat.s
 
 # HFILES = $(patsubst %,$(HPATH)/%, $(HEADER))
 SFILES = $(patsubst %.s, $(OPATH)/%.o, $(SRCS))
@@ -59,3 +60,7 @@ tests: all
 qp: all
 	gcc main_qperez.c $(NAME) -I $(HPATH) -o tests_qp
 	./tests_qp
+
+cat: all
+	gcc main_cat.c $(NAME) -I $(HPATH) -o tests_cat
+	./tests_cat
