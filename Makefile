@@ -28,7 +28,6 @@ SRCS = \
 		ft_toupper.s		\
 		ft_cat.s
 
-# HFILES = $(patsubst %,$(HPATH)/%, $(HEADER))
 SFILES = $(patsubst %.s, $(OPATH)/%.o, $(SRCS))
 
 all: $(OPATH) $(NAME)
@@ -60,6 +59,10 @@ tests: all
 qp: all
 	gcc main_qperez.c $(NAME) -I $(HPATH) -o tests_qp
 	./tests_qp
+
+puts: all
+	gcc main_puts.c $(NAME) -I $(HPATH) -o tests_puts
+	./tests_puts
 
 cat: all
 	gcc main_cat.c $(NAME) -I $(HPATH) -o tests_cat
