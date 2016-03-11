@@ -1,18 +1,4 @@
 /*
- *
- *	Salut la nouvelle promo merci de lire README.md et bon courage tout le monde
- *
- *	https://github.com/QuentinPerez
- *	https://github.com/mfontain
- *	https://github.com/alex8092
- *	https://github.com/gabtoubl
- *	https://github.com/soyel
- *	https://github.com/stherman
- *	https://github.com/jplot
- *
- */
-
-/*
 ** author : qperez
 ** HardCore + strtrim + Fixes: mfontain
 ** Fixes strsplit, strequ: gabtoubl
@@ -32,7 +18,7 @@
 #include <unistd.h>
 #include <signal.h>
 
-#include "libfts.h" /* compile with -I./ */
+#include "libfts.h"
 
 #define D_ERROR	{ printf("Error Line %d, Funct %s ", __LINE__ - 1, __func__); return (0); }
 #define D_ADD_HCTEST(name)	uf_add_test(test, "\033[33m"#name"\033[0m", uf_test_##name);

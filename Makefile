@@ -6,7 +6,7 @@
 #    By: ycribier <ycribier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/03/10 20:59:14 by ycribier          #+#    #+#              #
-#    Updated: 2016/03/10 21:52:20 by ycribier         ###   ########.fr        #
+#    Updated: 2016/03/11 11:02:30 by ycribier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,7 @@ OPATH = obj
 
 NAME = libfts.a
 SFLAGS = -f macho64
+CFLAGS = -Wall -Werror -Wextra
 
 SRCS = \
 		ft_bzero.s			\
@@ -68,14 +69,16 @@ $(OPATH):
 
 # TESTS
 
+
+
 tests_qp: all
-	gcc main_qperez.c $(NAME) -I $(HPATH) -o tests_qp
+	gcc $(CFLAGS) main_qperez.c $(NAME) -I $(HPATH) -o tests_qp
 	./tests_qp
 
 tests_puts: all
-	gcc main_puts.c $(NAME) -I $(HPATH) -o tests_puts
+	gcc $(CFLAGS) main_puts.c $(NAME) -I $(HPATH) -o tests_puts
 	./tests_puts
 
 tests_cat: all
-	gcc main_cat.c $(NAME) -I $(HPATH) -o tests_cat
+	gcc $(CFLAGS) main_cat.c $(NAME) -I $(HPATH) -o tests_cat
 	./tests_cat
